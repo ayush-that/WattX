@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { Bricolage_Grotesque } from 'next/font/google';
 
 import { Wrapper, Container, Icons } from '@/components';
 import Marquee from '@/components/ui/marquee';
@@ -26,6 +27,11 @@ import { cn } from '@/lib/utils';
 import { features, perks, pricingCards, reviews } from '@/constants';
 
 import { ArrowRight, ChevronRight, UserIcon, Zap } from 'lucide-react';
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function HomePage() {
   const firstRow = reviews.slice(0, reviews.length / 2);
@@ -70,7 +76,9 @@ export default function HomePage() {
                         </button> */}
 
             <div className="mt-8 flex w-11/12 max-w-3xl flex-col items-center md:w-full">
-              <TextGenerateEffect words={heroTitle} title={true} />
+              <div className={`${bricolage.className}`}>
+                <TextGenerateEffect words={heroTitle} title={true} />
+              </div>
 
               {/* <h1 className="text-4xl md:text-6xl lg:textxl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
                                 Build your next idea and ship your dream site
@@ -84,7 +92,7 @@ export default function HomePage() {
 
               <div className="relative mt-8 hidden w-full items-center justify-center md:mt-12 md:flex">
                 <Link
-                  href="#"
+                  href="/sign-up"
                   className="shadow-3xl flex w-max cursor-pointer select-none items-center justify-center gap-2 rounded-full border-t border-foreground/30 bg-white/20 px-2 py-1 shadow-background/40 backdrop-blur-lg md:gap-8 md:py-2"
                 >
                   <p className="pl-4 pr-4 text-center text-sm font-medium text-foreground md:text-base lg:marker:pr-0">
@@ -124,9 +132,11 @@ export default function HomePage() {
         <Container>
           <div className="max-w-md text-start md:mx-auto md:text-center">
             <SectionBadge title="The Process" />
-            <h2 className="mt-6 text-3xl font-semibold lg:text-4xl">
-              Three Simple Steps to Start Trading Energy
-            </h2>
+            <div className={`${bricolage.className}`}>
+              <h2 className="mt-6 text-3xl font-semibold lg:text-4xl">
+                Three Simple Steps to Start Trading Energy
+              </h2>
+            </div>
             <p className="mt-6 text-muted-foreground">
               Begin your energy trading journey in just 3 easy steps
             </p>
@@ -160,9 +170,11 @@ export default function HomePage() {
         <Container>
           <div className="mx-auto max-w-md text-start md:text-center">
             <SectionBadge title="Features" />
-            <h2 className="mt-6 text-3xl font-semibold lg:text-4xl">
-              Explore Our Cutting-Edge Features
-            </h2>
+            <div className={`${bricolage.className}`}>
+              <h2 className="mt-6 text-3xl font-semibold lg:text-4xl">
+                Explore Our Cutting-Edge Features
+              </h2>
+            </div>
             <p className="mt-6 text-muted-foreground">
               Our platform provides powerful tools to revolutionize energy
               trading and sustainability
@@ -265,9 +277,11 @@ export default function HomePage() {
         <Container>
           <div className="mx-auto max-w-md text-start md:text-center">
             <SectionBadge title="Our Customers" />
-            <h2 className="mt-6 text-3xl font-semibold lg:text-4xl">
-              What people are saying
-            </h2>
+            <div className={`${bricolage.className}`}>
+              <h2 className="mt-6 text-3xl font-semibold lg:text-4xl">
+                What people are saying
+              </h2>
+            </div>
             <p className="mt-6 text-muted-foreground">
               See how WattX empowers people of all backgrounds. Here&apos;s what
               real people are saying
@@ -344,9 +358,11 @@ export default function HomePage() {
         <Container>
           <LampContainer>
             <div className="relative flex w-full flex-col items-center justify-center text-center">
-              <h2 className="mt-8 text-4xl font-semibold lg:text-5xl lg:!leading-snug xl:text-6xl">
-                Our Vision
-              </h2>
+              <div className={`${bricolage.className}`}>
+                <h2 className="mt-8 text-4xl font-semibold lg:text-5xl lg:!leading-snug xl:text-6xl">
+                  Our Vision
+                </h2>
+              </div>
               <p className="mx-auto mt-6 max-w-md text-muted-foreground">
                 Revolutionize energy trading with effortless smart contracts and
                 sustainability through piezoelectricity.
