@@ -3,17 +3,17 @@ import { Icons } from '@/components';
 export const perks = [
   {
     icon: Icons.auth,
-    title: 'Sign Up',
+    title: 'I. Sign Up',
     info: 'Create your free account to start buying, selling, or storing energy.',
   },
   {
     icon: Icons.customize,
-    title: 'Trade',
+    title: 'II. Trade',
     info: "Select whether you're selling surplus solar power or purchasing energy at low prices.",
   },
   {
     icon: Icons.launch,
-    title: 'Store & Use',
+    title: 'III. Store & Use',
     info: 'Securely store energy for future projects or manage your energy portfolio with ease.',
   },
 ];
