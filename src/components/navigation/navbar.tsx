@@ -20,7 +20,7 @@ export async function Navbar() {
         <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 transform md:flex">
           <ul className="flex items-center justify-center gap-8">
             <li className="text-sm hover:text-foreground/80">
-              <Link href="#">Trade Energy</Link>
+              <Link href="/trade">Trade Energy</Link>
             </li>
             <li className="text-sm hover:text-foreground/80">
               <Link href="#">How It Works</Link>
@@ -39,12 +39,13 @@ export async function Navbar() {
             <UserButton />
           ) : (
             <>
-              <Link
+              {/* Login button */}
+              {/* <Link
                 href="/sign-in"
                 className={buttonVariants({ size: 'sm', variant: 'ghost' })}
               >
                 Login
-              </Link>
+              </Link> */}
               <Link
                 href="/sign-up"
                 className={buttonVariants({
